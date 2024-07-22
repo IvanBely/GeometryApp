@@ -3,6 +3,7 @@ package com.example;
 import com.example.geometry.Circle;
 import com.example.geometry.Rectangle;
 import com.example.geometry.Triangle;
+import com.example.geometryutils.GeometryUtils;
 
 
 public class Main {
@@ -19,5 +20,9 @@ public class Main {
 
         System.out.println("Triangle Area: " + triangle.getArea());
         System.out.println("Triangle Perimeter: " + triangle.getPerimeter());
+
+        double areaInSquareMeters = rectangle.getArea();
+        double areaInSquareFeet = GeometryUtils.convertSquareMetersToSquareFeet(areaInSquareMeters);
+        System.out.println("Area in square feet: " + areaInSquareFeet);
     }
 }
