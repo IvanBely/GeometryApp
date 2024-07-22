@@ -4,6 +4,8 @@ import com.example.geometry.Circle;
 import com.example.geometry.Rectangle;
 import com.example.geometry.Triangle;
 import com.example.geometryutils.GeometryUtils;
+import com.example.threedimensionalshapes.Cube;
+import com.example.threedimensionalshapes.Sphere;
 
 
 public class Main {
@@ -24,5 +26,14 @@ public class Main {
         double areaInSquareMeters = rectangle.getArea();
         double areaInSquareFeet = GeometryUtils.convertSquareMetersToSquareFeet(areaInSquareMeters);
         System.out.println("Area in square feet: " + areaInSquareFeet);
+
+        Cube cube = new Cube(3.0);
+        Sphere sphere = new Sphere(4.0);
+
+        System.out.println("Cube volume: " + cube.getVolume());
+        System.out.println("Cube surface area: " + cube.getSurfaceArea());
+
+        System.out.println("Sphere volume: " + sphere.getVolume());
+        System.out.println("Sphere surface area: " + sphere.getSurfaceArea());
     }
 }
